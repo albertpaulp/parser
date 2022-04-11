@@ -5,5 +5,6 @@ source "https://rubygems.org"
 group :test, :development do
   gem 'rspec'
   gem 'simplecov'
+  gem 'rubocop'
   gem 'pry'
 end
