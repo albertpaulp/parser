@@ -5,4 +5,4 @@ require_relative '../lib/app'
 
 log_file = ARGV[0]
 
-puts App.new(log_file).analyse
+puts App.new(log_file).process
