@@ -47,11 +47,19 @@ bundle exec rspec
 
 # Design considerations
 
-- LogParser can be broken to 3 functional component(Parser, Analyser, Printer)
-- Parser component abstracts logic to parse a specific type of log file, eg. webserver, application server etc.
-- Analyser contains aggregation/analytical abstractions.
-- Lastly, Presenter knows how to output data, eg. Json, StadOut etc.
+- LogParser can be broken to 3 functional components(Parser, Analyser, Printer)
+- `Parser` component abstracts logic to parse a specific type of log file, eg. webserver, application server etc.
+- `Analyser` contains aggregation/analytical abstractions.
+- Lastly, `Presenter` knows how to output data, eg. Json, StadOut etc.
 - Designed in a way that we can add/swap different components to add/update functionality.
 - For example, we should be able to use `JsonDownloader` as presenter instead of `StdOutput` with minimal change.
 - Using CircleCI to automate running specs and linting with rubocop.
 - Using simplecov to calculate test coverage(Currently at 98.6%). Coverage file is in `coverage/index`
+
+## Entities used
+### Visitor
+Represents a unique device/customer visit.
+Uses `ip` for uniqueness.
+### WebPage
+Contains unique web_page from logs.
+Uses `url` to uniqueness.
