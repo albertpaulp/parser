@@ -9,4 +9,4 @@ loader.setup
 
 log_file = ARGV[0]
 
-puts App.new(log_file).process
+App.new(log_file).process

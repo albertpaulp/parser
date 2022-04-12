@@ -53,8 +53,14 @@ bundle exec rspec
 - Lastly, `Presenter` knows how to output data, eg. Json, StadOut etc.
 - Designed in a way that we can add/swap different components to add/update functionality.
 - For example, we should be able to use `JsonDownloader` as presenter instead of `StdOutput` with minimal change.
+- Trying to store just enough data in memory while preserving all data from log.
 - Using CircleCI to automate running specs and linting with rubocop.
 - Using simplecov to calculate test coverage(Currently at 98.6%). Coverage file is in `coverage/index`
+
+# Scope for improvements
+- Find a better way to test Presenter class without dumping output to STDOUT.
+- Add validations for Parser component so that if log contains any invalid lines, app gracefully warns.
+- Think about using comparable module in WebPage entity(with total_page_views as default may be).
 
 ## Entities used
 ### Visitor
