@@ -18,7 +18,7 @@ class App
 
     web_pages = parser.new(log_text).parse
     analyser = analyser_klass.new(web_pages)
-    #presenter.print(analyser)
+    presenter.print(analyser)
   end
 
   private

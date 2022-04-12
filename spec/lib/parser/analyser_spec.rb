@@ -1,6 +1,7 @@
 # frozen_string_literal: true
-require 'pry'
+
 require 'spec_helper'
+
 RSpec.describe Parser::Analyser do
   let(:fake_page_a) do
     instance_double(Parser::WebPage, url: 'A', total_page_views: 12, total_unique_page_views: 10)
