@@ -2,6 +2,7 @@
 
 source "https://rubygems.org"
 
+gem 'zeitwerk'
 group :test, :development do
   gem 'rspec'
   gem 'simplecov'

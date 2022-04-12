@@ -1,5 +1,5 @@
 # frozen_string_literal: true
-require 'pry'
+
 RSpec.describe 'Parser bin executable' do
   context 'when CLI is invoked with valid log file' do
     it 'returns successful exit status(0)' do
