@@ -20,11 +20,11 @@ RSpec.describe Parser::Presenter::Stdout do
       end
 
       xit 'title is printed in stdout' do
-        #TODO
+        # TODO
       end
 
       xit 'web_page table is printed in stdout' do
-        #TODO
+        # TODO
       end
     end
   end

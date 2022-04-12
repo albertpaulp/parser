@@ -18,17 +18,17 @@ RSpec.describe Parser::Analyser do
   describe '#sort' do
     context 'when invalid sort order is called' do
       it 'raises InvalidSortOrder with error message' do
-        expect {
+        expect do
           subject.sort(order: :asc)
-        }.to raise_error(Parser::Exception::InvalidSortOrder, 'Unsupported sort order')
+        end.to raise_error(Parser::Exception::InvalidSortOrder, 'Unsupported sort order')
       end
     end
 
     context 'when invalid sort by is passed' do
       it 'raises InvalidSortBy with error message' do
-        expect {
+        expect do
           subject.sort(by: :time)
-        }.to raise_error(Parser::Exception::InvalidSortBy, 'Unsupported sort by')
+        end.to raise_error(Parser::Exception::InvalidSortBy, 'Unsupported sort by')
       end
     end
 
@@ -37,7 +37,7 @@ RSpec.describe Parser::Analyser do
         it 'returns web_pages sort by total_page_views in descending order' do
           web_pages = subject.sort(order: :desc, by: :total_page_views)
 
-          expect(web_pages.map(&:url)).to eq(['C', 'B', 'A'])
+          expect(web_pages.map(&:url)).to eq(%w[C B A])
         end
       end
     end
@@ -47,7 +47,7 @@ RSpec.describe Parser::Analyser do
         it 'returns web_pages sort by total_page_views in descending order' do
           web_pages = subject.sort(order: :desc, by: :unique_page_views)
 
-          expect(web_pages.map(&:url)).to eq(['B', 'C', 'A'])
+          expect(web_pages.map(&:url)).to eq(%w[B C A])
         end
       end
     end

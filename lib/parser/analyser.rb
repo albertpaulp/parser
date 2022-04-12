@@ -5,16 +5,16 @@ module Parser
   class Analyser
     attr_reader :web_pages
 
-    ALLOWED_SORT_ORDERS = [:desc]
-    ALLOWED_SORT_BY = [:total_page_views, :unique_page_views]
+    ALLOWED_SORT_ORDERS = [:desc].freeze
+    ALLOWED_SORT_BY = %i[total_page_views unique_page_views].freeze
 
     def initialize(web_pages)
       @web_pages = web_pages
     end
 
     def sort(order: :desc, by: :total_page_views)
-      raise Exception::InvalidSortOrder, "Unsupported sort order" unless ALLOWED_SORT_ORDERS.include?(order)
-      raise Exception::InvalidSortBy, "Unsupported sort by" unless ALLOWED_SORT_BY.include?(by)
+      raise Exception::InvalidSortOrder, 'Unsupported sort order' unless ALLOWED_SORT_ORDERS.include?(order)
+      raise Exception::InvalidSortBy, 'Unsupported sort by' unless ALLOWED_SORT_BY.include?(by)
 
       send("sort_#{by}_by_#{order}_order")
     end

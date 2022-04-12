@@ -2,6 +2,10 @@ Metrics/BlockLength:
   Enabled: true
   Exclude:
     - "spec/**/*.rb"
+Layout/LineLength:
+  Enabled: true
+  Exclude:
+    - 'lib/parser/presenter/*.rb'
 
 # Prefer class documentation above module.
 Style/Documentation:

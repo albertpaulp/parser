@@ -6,7 +6,12 @@ class App
 
   ACCEPTED_FILE_TYPE = '.log'
 
-  def initialize(log_file, parser: Parser::LogFormat::Webserver, analyser_klass: Parser::Analyser, presenter: Parser::Presenter::Stdout)
+  def initialize(
+    log_file,
+    parser: Parser::LogFormat::Webserver,
+    analyser_klass: Parser::Analyser,
+    presenter: Parser::Presenter::Stdout
+  )
     @log_file = log_file
     @parser = parser
     @analyser_klass = analyser_klass
