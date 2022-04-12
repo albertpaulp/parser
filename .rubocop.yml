@@ -2,3 +2,7 @@ Metrics/BlockLength:
   Enabled: true
   Exclude:
     - "spec/**/*.rb"
+
+# Prefer class documentation above module.
+Style/Documentation:
+  Enabled: false

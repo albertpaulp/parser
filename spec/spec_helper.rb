@@ -1,6 +1,7 @@
 # frozen_string_literal: true
+
 require 'rspec'
-require "zeitwerk"
+require 'zeitwerk'
 
 # Use Zeitwerk to automate file loading
 loader = Zeitwerk::Loader.new

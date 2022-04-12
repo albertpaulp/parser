@@ -32,7 +32,7 @@ module Parser
       private
 
       def create_or_find_visitor(ip)
-        visitor = visitors.find { |visitor| visitor.ip == ip }
+        visitor = visitors.find { |v| v.ip == ip }
         return visitor if visitor
 
         visitor = visitor_klass.new(ip)

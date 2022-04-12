@@ -6,8 +6,8 @@ RSpec.describe Parser::LogFormat::Webserver do
   describe '.parse' do
     let(:file_name) { 'spec/support/sample_logfile.log' }
     let(:log_contents) { File.foreach(file_name) }
-    let(:fake_visitor) { instance_double(Parser::Visitor, ip: "126.318.035.038") }
-    let(:fake_webpage) { instance_double(Parser::WebPage, url: "/help_page/1", visit: true) }
+    let(:fake_visitor) { instance_double(Parser::Visitor, ip: '126.318.035.038') }
+    let(:fake_webpage) { instance_double(Parser::WebPage, url: '/help_page/1', visit: true) }
     subject do
       described_class.new(
         log_contents,

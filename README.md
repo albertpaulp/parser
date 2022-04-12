@@ -1,4 +1,5 @@
 # Log Parser
+[![<ORG_NAME>](https://circleci.com/gh/albertpaulp/parser.svg?style=svg)](https://app.circleci.com/pipelines/github/albertpaulp/parser)
 
 Log Parser reads, analyses and pretty print statics from log files.
 

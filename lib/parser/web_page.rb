@@ -3,7 +3,7 @@
 # Entity that holds visit information for a page. Created with unique page url.
 module Parser
   class WebPage
-   attr_reader :url, :visitor_records
+    attr_reader :url, :visitor_records
 
     def initialize(url)
       @url = url

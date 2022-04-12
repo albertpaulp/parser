@@ -13,4 +13,3 @@ RSpec.describe 'Parser bin executable' do
     end
   end
 end
-

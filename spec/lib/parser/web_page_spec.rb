@@ -3,12 +3,12 @@
 require 'spec_helper'
 
 RSpec.describe Parser::WebPage do
-  subject { described_class.new("/about/me") }
+  subject { described_class.new('/about/me') }
 
   describe '.new' do
     context 'when called with url' do
       it 'creates web_page object with url' do
-        expect(subject.url).to eq("/about/me")
+        expect(subject.url).to eq('/about/me')
       end
 
       it 'sets visitor_records as empty' do

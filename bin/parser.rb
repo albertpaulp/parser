@@ -1,6 +1,7 @@
 #!/usr/bin/env ruby
+# frozen_string_literal: true
 
-require "zeitwerk"
+require 'zeitwerk'
 # Use Zeitwerk to automate file loading
 loader = Zeitwerk::Loader.new
 loader.push_dir('lib')

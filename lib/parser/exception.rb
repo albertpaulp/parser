@@ -5,4 +5,3 @@ module Parser
     class InvalidFileType < StandardError; end
   end
 end
-
