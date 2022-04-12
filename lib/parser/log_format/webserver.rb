@@ -27,6 +27,7 @@ module Parser
 
           web_page.visit(visitor)
         end
+        web_pages
       end
 
       private

@@ -16,6 +16,14 @@ module Parser
       create_new_visit_record(visitor)
     end
 
+    def total_page_views
+      visitor_records.values.sum
+    end
+
+    def total_unique_page_views
+      visitor_records.keys.count
+    end
+
     private
 
     def update_visit_count(visitor)
